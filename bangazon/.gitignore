@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+bangazon/__pycache__/
+bangazon_api/__pycache__/
 *.py[cod]
 *$py.class
 
