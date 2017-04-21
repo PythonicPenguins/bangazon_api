@@ -98,4 +98,4 @@ ENV/
 /site
 
 
-sqlite3.db
+db.sqlite3
