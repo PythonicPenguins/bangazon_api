@@ -8,12 +8,12 @@ class Customer(models.Model):
     status = models.IntegerField(default=1)
 
 
-class Payment_Type(models.Model):
+class PaymentType(models.Model):
     account_number = models.IntegerField()
     customer_id = models.ForeignKey(Customer)
 
 
-class Product_Type(models.Model):
+class ProductType(models.Model):
     name = models.CharField(max_length=70)
 
 
@@ -22,7 +22,7 @@ class Product(models.Model):
     name = models.CharField(max_length=70)
     description = models.CharField(max_length=255)
     date_created = models.DateTimeField()
-    product_type_id = models.ForeignKey(Product_Type)
+    product_type_id = models.ForeignKey(ProductType)
     customer_id = models.ForeignKey(Customer)
 
 

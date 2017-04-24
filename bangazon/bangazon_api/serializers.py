@@ -20,9 +20,9 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
         model = Customer
         exclude = ()
 
-class Payment_TypeSerializer(serializers.HyperlinkedModelSerializer):
+class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Payment_Type
+        model = PaymentType
         exclude = ()
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
@@ -30,7 +30,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
         model = Product
         exclude = ()
 
-class Product_TypeSerializer(serializers.HyperlinkedModelSerializer):
+class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Product_Type
+        model = ProductType
         exclude = ()
