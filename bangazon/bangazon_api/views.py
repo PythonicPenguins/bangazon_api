@@ -52,7 +52,23 @@ class ProductTypeViewSet(viewsets.ModelViewSet):
     queryset = ProductType.objects.all()
     serializer_class = ProductTypeSerializer
 
-    
+
+class OrderViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+
+class OrderProductViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = OrderProduct.objects.all()
+    serializer_class = OrderProductSerializer
+
+
 class EmployeeViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows employee data to be viewed and edited.

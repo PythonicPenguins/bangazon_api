@@ -32,7 +32,17 @@ class Product(models.Model):
     product_type_id = models.ForeignKey(ProductType)
     customer_id = models.ForeignKey(Customer)
 
-    
+
+class Order(models.Model):
+    date_order_created = models.DateTimeField()
+    customer_id = models.ForeignKey(Customer)
+    paymentType_id = models.ForeignKey(PaymentType)
+
+class OrderProduct(models.Model):
+    order_id = models.ForeignKey(Order)
+    product_id = models.ForeignKey(Product)
+
+
 class Computer(models.Model):
     """
     author: Gilberto Diaz
