@@ -38,10 +38,22 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
         model = Product
         exclude = ()
 
-        
+
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ProductType
+
+
+class OrderSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Order
+        exclude = ()
+
+
+class OrderProductSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = OrderProduct
+        exclude = ()
 
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
