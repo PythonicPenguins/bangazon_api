@@ -20,6 +20,19 @@ class PaymentType(models.Model):
     customer_id = models.ForeignKey(Customer)
 
 
+class ProductType(models.Model):
+    name = models.CharField(max_length=70)
+
+
+class Product(models.Model):
+    price = models.FloatField()
+    name = models.CharField(max_length=70)
+    description = models.CharField(max_length=255)
+    date_created = models.DateTimeField()
+    product_type_id = models.ForeignKey(ProductType)
+    customer_id = models.ForeignKey(Customer)
+
+    
 class Computer(models.Model):
     """
     author: Gilberto Diaz
@@ -63,3 +76,4 @@ class TrainingSession(models.Model):
     """
     training_id = models.ForeignKey(Training)
     employee_id = models.ForeignKey(Employee)
+

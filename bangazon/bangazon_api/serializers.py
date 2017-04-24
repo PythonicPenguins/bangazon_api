@@ -33,6 +33,17 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
         exclude = ()
 
 
+class ProductSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Product
+        exclude = ()
+
+        
+class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ProductType
+
+
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """
     author: Gilberto Diaz
