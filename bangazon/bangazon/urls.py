@@ -6,7 +6,9 @@ router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 router.register(r'customers', views.CustomerViewSet)
-router.register(r'paymentType', views.PaymentTypeViewSet)
+router.register(r'payment-type', views.Payment_TypeViewSet)
+router.register(r'product-type', views.Product_TypeViewSet)
+router.register(r'product', views.ProductViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
