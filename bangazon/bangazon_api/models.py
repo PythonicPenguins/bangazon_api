@@ -38,6 +38,7 @@ class Order(models.Model):
     customer_id = models.ForeignKey(Customer)
     paymentType_id = models.ForeignKey(PaymentType)
 
+
 class OrderProduct(models.Model):
     order_id = models.ForeignKey(Order)
     product_id = models.ForeignKey(Product)
@@ -48,7 +49,10 @@ class Computer(models.Model):
     author: Gilberto Diaz
     """
     purchased_date = models.DateField()
-    decommissioned_date = models.DateField()
+    decommissioned_date = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return str(self.id)
 
 
 class Department(models.Model):
@@ -56,7 +60,10 @@ class Department(models.Model):
     author: Gilberto Diaz
     """
     name = models.CharField(max_length=100)
-    budget = models.FloatField()
+    budget = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.name
 
 
 class Employee(models.Model):
@@ -86,4 +93,3 @@ class TrainingSession(models.Model):
     """
     training_id = models.ForeignKey(Training)
     employee_id = models.ForeignKey(Employee)
-
