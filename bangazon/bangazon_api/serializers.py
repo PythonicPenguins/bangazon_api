@@ -19,3 +19,8 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Customer
         exclude = ()
+
+class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = PaymentType
+        exclude = ()
