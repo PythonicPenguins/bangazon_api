@@ -6,6 +6,10 @@
 # C extensions
 *.so
 
+# IDE's
+# PyCharm
+.idea/
+
 # Distribution / packaging
 .Python
 env/
@@ -101,4 +105,4 @@ ENV/
 db.sqlite3
 
 # migrations
-migrations/*
+*/migrations/*
