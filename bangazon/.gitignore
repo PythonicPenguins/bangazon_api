@@ -6,6 +6,10 @@
 # C extensions
 *.so
 
+# IDE's
+# PyCharm
+*/.idea
+
 # Distribution / packaging
 .Python
 env/
