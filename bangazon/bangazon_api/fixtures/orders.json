@@ -2,25 +2,19 @@
   {
     "model": "bangazon_api.order",
     "fields": {
-      "date_order_created": 1,
-      "customers": 1,
-      "paymentTypes": 1
+      "customers": 1
     }
   },
   {
     "model": "bangazon_api.order",
     "fields": {
-      "date_order_created": 1,
-      "customers": 2,
-      "paymentTypes": 2
+      "customers": 2
     }
   },
   {
     "model": "bangazon_api.order",
     "fields": {
-      "date_order_created": 2,
-      "customers": 3,
-      "paymentTypes": 3
+      "customers": 3
     }
   }
 ]

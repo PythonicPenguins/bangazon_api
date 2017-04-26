@@ -1,0 +1,23 @@
+ [
+  {
+    "model": "bangazon_api.OrderProduct",
+    "fields": {
+      "orders": 1,
+      "products": 1
+    }
+  },
+  {
+    "model": "bangazon_api.OrderProduct",
+    "fields": {
+      "orders": 1,
+      "products": 2
+    }
+  },
+  {
+    "model": "bangazon_api.OrderProduct",
+    "fields": {
+      "orders": 2,
+      "products": 3
+    }
+  }
+]

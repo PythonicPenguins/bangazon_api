@@ -5,7 +5,7 @@
       "price": 9.99,
       "name": "Chair",
       "description": "black, very comfortable",
-      "date_created": "04/26/2017",
+      "date_created": "2017-04-26",
       "product_types": 1,
       "customers": 1
     }
@@ -16,7 +16,7 @@
       "price": 129.99,
       "name": "MP3 Player",
       "description": "crisp sound, lots of memory",
-      "date_created": "04/26/2017",
+      "date_created": "2017-04-26",
       "product_types": 2,
       "customers": 2
     }
@@ -27,7 +27,7 @@
       "price": 99.99,
       "name": "Wooden desk",
       "description": "handmade from reclaimed wood",
-      "date_created": "04/26/2017",
+      "date_created": "2017-04-26",
       "product_types": 3,
       "customers": 1
     }

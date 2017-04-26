@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 
 class Customer(models.Model):
@@ -47,9 +48,9 @@ class Order(models.Model):
     purpose: expose all order types and add realtionship to PaymentType and Customer classes
     author: Meg Ducharme
     """
-    date_order_created = models.DateTimeField()
+    date_order_created = models.DateTimeField(default=datetime.now, blank=True)
     customers = models.ForeignKey(Customer)
-    payment_types = models.ForeignKey(PaymentType)
+    payment_types = models.ForeignKey(PaymentType, null=True, blank=True)
 
 class OrderProduct(models.Model):
     """
@@ -66,7 +67,7 @@ class Computer(models.Model):
     author: Gilberto Diaz
     """
     purchased_date = models.DateField()
-    decommissioned_date = models.DateField()
+    decommissioned_date = models.DateField(null=True, blank=True)
 
 
 class Department(models.Model):
@@ -97,7 +98,7 @@ class Training(models.Model):
     """
     start_date = models.DateField()
     name = models.CharField(max_length=55)
-    end_date = models.DateField()
+    end_date = models.DateField(null=True, blank=True)
     max_attendees = models.IntegerField()
 
 
