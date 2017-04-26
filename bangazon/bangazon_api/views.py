@@ -61,14 +61,6 @@ class OrderViewSet(viewsets.ModelViewSet):
     serializer_class = OrderSerializer
 
 
-class OrderProductViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
-    queryset = OrderProduct.objects.all()
-    serializer_class = OrderProductSerializer
-
-
 class EmployeeViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows employee data to be viewed and edited.
@@ -103,12 +95,3 @@ class TrainingViewSet(viewsets.ModelViewSet):
     """
     queryset = Training.objects.all()
     serializer_class = TrainingSerializer
-
-
-class TrainingSessionViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows training session data to be viewed and edited.
-    author: Gilberto Diaz
-    """
-    queryset = TrainingSession.objects.all()
-    serializer_class = TrainingSessionSerializer

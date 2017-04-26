@@ -51,12 +51,6 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
         exclude = ()
 
 
-class OrderProductSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = OrderProduct
-        exclude = ()
-
-
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """
     author: Gilberto Diaz
@@ -92,11 +86,3 @@ class TrainingSerializer(serializers.HyperlinkedModelSerializer):
         model = Training
         exclude = ()
 
-
-class TrainingSessionSerializer(serializers.HyperlinkedModelSerializer):
-    """
-    author: Gilberto Diaz
-    """
-    class Meta:
-        model = TrainingSession
-        exclude = ()
