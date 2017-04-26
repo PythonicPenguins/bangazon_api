@@ -4,12 +4,20 @@ from bangazon_api.models import *
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    purpose: serialize queried data to json for client
+    author: Meg Ducharme
+    """
     class Meta:
         model = User
         fields = ('url', 'username', 'email', 'groups')
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    purpose: serialize queried data to json for client
+    author: Meg Ducharme
+    """
     class Meta:
         model = Group
         fields = ('url', 'name')
@@ -17,6 +25,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     """
+    purpose: serialize queried data to json for client
     author: Meg Ducharme
     """
     class Meta:
@@ -26,6 +35,7 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
 
 class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     """
+    purpose: serialize queried data to json for client
     author: Meg Ducharme
     """
     class Meta:
@@ -34,18 +44,30 @@ class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    purpose: serialize queried data to json for client
+    author: Meg Ducharme
+    """
     class Meta:
         model = Product
         exclude = ()
 
 
 class ProductTypeSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    purpose: serialize queried data to json for client
+    author: Gilberto Diaz
+    """
     class Meta:
         model = ProductType
         exclude = ()
 
 
 class OrderSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    purpose: serialize queried data to json for client
+    author: Gilberto Diaz
+    """
     class Meta:
         model = Order
         exclude = ()
@@ -53,6 +75,7 @@ class OrderSerializer(serializers.HyperlinkedModelSerializer):
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
     """
+    purpose: serialize queried data to json for client
     author: Gilberto Diaz
     """
     class Meta:
@@ -62,6 +85,7 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
 
 class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
     """
+    purpose: serialize queried data to json for client
     author: Gilberto Diaz
     """
     class Meta:
@@ -71,6 +95,7 @@ class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
 
 class ComputerSerializer(serializers.HyperlinkedModelSerializer):
     """
+    purpose: serialize queried data to json for client
     author: Gilberto Diaz
     """
     class Meta:
@@ -80,6 +105,7 @@ class ComputerSerializer(serializers.HyperlinkedModelSerializer):
 
 class TrainingSerializer(serializers.HyperlinkedModelSerializer):
     """
+    purpose: serialize queried data to json for client
     author: Gilberto Diaz
     """
     class Meta:

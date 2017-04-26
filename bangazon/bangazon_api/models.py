@@ -104,6 +104,7 @@ class Training(models.Model):
 
 class TrainingSession(models.Model):
     """
+    purpose: create table to hold relationship between training sessions and employees
     author: Gilberto Diaz
     """
     trainings = models.ForeignKey(Training)
