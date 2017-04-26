@@ -40,6 +40,7 @@ class PaymentTypeViewSet(viewsets.ModelViewSet):
 class ProductViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
+    author: Meg Ducharme
     """
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -48,6 +49,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 class ProductTypeViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
+    author: Meg Ducharme
     """
     queryset = ProductType.objects.all()
     serializer_class = ProductTypeSerializer
@@ -56,6 +58,7 @@ class ProductTypeViewSet(viewsets.ModelViewSet):
 class OrderViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
+    author: Meg Ducharme
     """
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
