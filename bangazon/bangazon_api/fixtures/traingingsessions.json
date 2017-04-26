@@ -1,0 +1,23 @@
+ [
+  {
+    "model": "bangazon_api.TrainingSession",
+    "fields": {
+      "trainings": 1,
+      "employees": 1
+    }
+  },
+  {
+    "model": "bangazon_api.TrainingSession",
+    "fields": {
+      "trainings": 1,
+      "employees": 2
+    }
+  },
+  {
+    "model": "bangazon_api.TrainingSession",
+    "fields": {
+      "trainings": 2,
+      "employees": 3
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "model": "bangazon_api.computer",
+    "fields": {
+      "purchased_date": "04/26/2017",
+      "decomissioned_date": ""
+    }
+  },
+  {
+    "model": "bangazon_api.computer",
+    "fields": {
+      "purchased_date": "04/26/2017",
+      "decomissioned_date": ""
+    }
+  },
+  {
+    "model": "bangazon_api.computer",
+    "fields": {
+      "purchased_date": "04/26/2017",
+      "decomissioned_date": ""
+    }
+  }
+]

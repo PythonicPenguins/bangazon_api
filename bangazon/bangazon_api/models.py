@@ -18,7 +18,7 @@ class PaymentType(models.Model):
     author: Meg Ducharme
     """
     account_number = models.IntegerField()
-    customer_id = models.ForeignKey(Customer)
+    customers = models.ForeignKey(Customer)
 
 
 class ProductType(models.Model):
@@ -38,8 +38,8 @@ class Product(models.Model):
     name = models.CharField(max_length=70)
     description = models.CharField(max_length=255)
     date_created = models.DateTimeField()
-    product_type_id = models.ForeignKey(ProductType)
-    customer_id = models.ForeignKey(Customer)
+    product_types = models.ForeignKey(ProductType)
+    customers = models.ForeignKey(Customer)
 
 
 class Order(models.Model):
@@ -48,16 +48,16 @@ class Order(models.Model):
     author: Meg Ducharme
     """
     date_order_created = models.DateTimeField()
-    customer_id = models.ForeignKey(Customer)
-    paymentType_id = models.ForeignKey(PaymentType)
+    customers = models.ForeignKey(Customer)
+    payment_types = models.ForeignKey(PaymentType)
 
 class OrderProduct(models.Model):
     """
     purpose: create relationship to show products on an order
     author: Meg Ducharme
     """
-    order_id = models.ForeignKey(Order)
-    product_id = models.ForeignKey(Product)
+    orders = models.ForeignKey(Order)
+    products = models.ForeignKey(Product)
 
 
 class Computer(models.Model):
@@ -86,8 +86,8 @@ class Employee(models.Model):
     first_name = models.CharField(max_length=55)
     last_name = models.CharField(max_length=55)
     supervisor = models.IntegerField()
-    department_id = models.ForeignKey(Department)
-    computer_id = models.ForeignKey(Computer)
+    departments = models.ForeignKey(Department)
+    computers = models.ForeignKey(Computer)
 
 
 class Training(models.Model):
@@ -105,6 +105,6 @@ class TrainingSession(models.Model):
     """
     author: Gilberto Diaz
     """
-    training_id = models.ForeignKey(Training)
-    employee_id = models.ForeignKey(Employee)
+    trainings = models.ForeignKey(Training)
+    employees = models.ForeignKey(Employee)
 

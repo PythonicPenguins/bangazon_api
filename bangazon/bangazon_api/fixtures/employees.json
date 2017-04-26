@@ -1,0 +1,32 @@
+[
+  {
+    "model": "bangazon_api.employee",
+    "fields": {
+      "first_name": "Meg",
+      "last_name": "Ducharme",
+      "supervisor": 0,
+      "departments": 1,
+      "computers": 1
+    }
+  },
+  {
+    "model": "bangazon_api.employee",
+    "fields": {
+      "first_name": "Gilbert",
+      "last_name": "Diaz",
+      "supervisor": 0,
+      "departments": 1,
+      "computers": 2
+    }
+  },
+  {
+    "model": "bangazon_api.employee",
+    "fields": {
+      "first_name": "Steve",
+      "last_name": "Brownlee",
+      "supervisor": 0,
+      "departments": 1,
+      "computers": 3
+    }
+  }
+]
