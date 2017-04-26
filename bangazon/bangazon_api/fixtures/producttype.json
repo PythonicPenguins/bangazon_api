@@ -1,0 +1,20 @@
+ [
+  {
+    "model": "bangazon_api.ProductType",
+    "fields": {
+      "name": "Home Goods"
+    }
+  },
+  {
+    "model": "bangazon_api.ProductType",
+    "fields": {
+      "name": "Office"
+    }
+  },
+  {
+    "model": "bangazon_api.ProductType",
+    "fields": {
+      "name": "Electronics"
+    }
+  }
+]

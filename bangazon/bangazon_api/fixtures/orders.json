@@ -1,0 +1,20 @@
+ [
+  {
+    "model": "bangazon_api.order",
+    "fields": {
+      "customers": 1
+    }
+  },
+  {
+    "model": "bangazon_api.order",
+    "fields": {
+      "customers": 2
+    }
+  },
+  {
+    "model": "bangazon_api.order",
+    "fields": {
+      "customers": 3
+    }
+  }
+]

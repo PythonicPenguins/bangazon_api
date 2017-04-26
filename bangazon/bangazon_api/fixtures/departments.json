@@ -1,0 +1,23 @@
+[
+  {
+    "model": "bangazon_api.department",
+    "fields": {
+      "name": "Sales",
+      "budget": 45000
+    }
+  },
+  {
+    "model": "bangazon_api.department",
+    "fields": {
+      "name": "Accounting",
+      "budget": 1000
+    }
+  },
+  {
+    "model": "bangazon_api.department",
+    "fields": {
+      "name": "Steve",
+      "budget": 5000
+    }
+  }
+]

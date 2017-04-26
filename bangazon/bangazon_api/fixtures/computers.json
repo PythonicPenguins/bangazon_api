@@ -1,0 +1,20 @@
+[
+  {
+    "model": "bangazon_api.computer",
+    "fields": {
+      "purchased_date": "2017-04-26"
+    }
+  },
+  {
+    "model": "bangazon_api.computer",
+    "fields": {
+      "purchased_date": "2017-04-26"
+    }
+  },
+  {
+    "model": "bangazon_api.computer",
+    "fields": {
+      "purchased_date": "2017-04-26"
+    }
+  }
+]

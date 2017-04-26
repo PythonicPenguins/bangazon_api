@@ -1,9 +1,10 @@
 from django.db import models
+from datetime import datetime
 
 
-# Create your models here.
 class Customer(models.Model):
     """
+    purpose: expose all customer data
     author: Meg Ducharme
     """
     first_name = models.CharField(max_length=55)
@@ -14,45 +15,64 @@ class Customer(models.Model):
 
 class PaymentType(models.Model):
     """
+    purpose: expose all payment types and add realtionship to Customer class
     author: Meg Ducharme
     """
     account_number = models.IntegerField()
-    customer_id = models.ForeignKey(Customer)
+    customers = models.ForeignKey(Customer)
 
 
 class ProductType(models.Model):
+    """
+    purpose: create product types table
+    author: Meg Ducharme
+    """
     name = models.CharField(max_length=70)
 
 
 class Product(models.Model):
+    """
+    purpose: expose all product types and add realtionship to product type class
+    author: Meg Ducharme
+    """
     price = models.FloatField()
     name = models.CharField(max_length=70)
     description = models.CharField(max_length=255)
     date_created = models.DateTimeField()
-    product_type_id = models.ForeignKey(ProductType)
-    customer_id = models.ForeignKey(Customer)
+    product_types = models.ForeignKey(ProductType)
+    customers = models.ForeignKey(Customer)
 
 
 class Order(models.Model):
-    date_order_created = models.DateTimeField()
-    customer_id = models.ForeignKey(Customer)
-    paymentType_id = models.ForeignKey(PaymentType)
+    """
+    purpose: expose all order types and add realtionship to PaymentType and Customer classes
+    author: Meg Ducharme
+    """
+    date_order_created = models.DateTimeField(default=datetime.now, blank=True)
+    customers = models.ForeignKey(Customer)
+    payment_types = models.ForeignKey(PaymentType, null=True, blank=True)
 
 class OrderProduct(models.Model):
-    order_id = models.ForeignKey(Order)
-    product_id = models.ForeignKey(Product)
+    """
+    purpose: create relationship to show products on an order
+    author: Meg Ducharme
+    """
+    orders = models.ForeignKey(Order)
+    products = models.ForeignKey(Product)
 
 
 class Computer(models.Model):
     """
+    purpose: create table to hold computer information
     author: Gilberto Diaz
     """
     purchased_date = models.DateField()
-    decommissioned_date = models.DateField()
+    decommissioned_date = models.DateField(null=True, blank=True)
 
 
 class Department(models.Model):
     """
+    purpose: create table to hold department information
     author: Gilberto Diaz
     """
     name = models.CharField(max_length=100)
@@ -61,22 +81,24 @@ class Department(models.Model):
 
 class Employee(models.Model):
     """
+    purpose: create table to hold employee and create relationship with Computer and Department classes
     author: Gilberto Diaz
     """
     first_name = models.CharField(max_length=55)
     last_name = models.CharField(max_length=55)
     supervisor = models.IntegerField()
-    department_id = models.ForeignKey(Department)
-    computer_id = models.ForeignKey(Computer)
+    departments = models.ForeignKey(Department)
+    computers = models.ForeignKey(Computer)
 
 
 class Training(models.Model):
     """
+    purpose: create table to hold traning information
     author: Gilberto Diaz
     """
     start_date = models.DateField()
     name = models.CharField(max_length=55)
-    end_date = models.DateField()
+    end_date = models.DateField(null=True, blank=True)
     max_attendees = models.IntegerField()
 
 
@@ -84,6 +106,6 @@ class TrainingSession(models.Model):
     """
     author: Gilberto Diaz
     """
-    training_id = models.ForeignKey(Training)
-    employee_id = models.ForeignKey(Employee)
+    trainings = models.ForeignKey(Training)
+    employees = models.ForeignKey(Employee)
 

@@ -1,0 +1,26 @@
+[
+  {
+    "model": "bangazon_api.training",
+    "fields": {
+      "start_date": "2017-04-26",
+      "name": "Django",
+      "max_attendees": 10
+    }
+  },
+  {
+    "model": "bangazon_api.training",
+    "fields": {
+      "start_date": "2017-04-26",
+      "name": "Rest Framework",
+      "max_attendees": 11
+    }
+  },
+  {
+    "model": "bangazon_api.training",
+    "fields": {
+      "start_date": "2017-04-26",
+      "name": "JavaScript",
+      "max_attendees": 15
+    }
+  }
+]

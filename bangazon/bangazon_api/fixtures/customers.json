@@ -1,0 +1,29 @@
+[
+  {
+    "model": "bangazon_api.customer",
+    "fields": {
+      "first_name": "Meg",
+      "last_name": "Ducharme",
+      "date_account_created": "04/26/2016",
+      "status": 1
+    }
+  },
+  {
+    "model": "bangazon_api.customer",
+    "fields": {
+      "first_name": "Gilbert",
+      "last_name": "Diaz",
+      "date_account_created": "04/26/2016",
+      "status": 1
+    }
+  },
+  {
+    "model": "bangazon_api.customer",
+    "fields": {
+      "first_name": "Steve",
+      "last_name": "Brownlee",
+      "date_account_created": "04/26/2016",
+      "status": 1
+    }
+  }
+]
