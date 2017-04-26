@@ -98,3 +98,12 @@ class TrainingViewSet(viewsets.ModelViewSet):
     """
     queryset = Training.objects.all()
     serializer_class = TrainingSerializer
+
+
+class CustomerIssueViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows training data to be viewed and edited.
+    author: Gilberto Diaz
+    """
+    queryset = CustomerIssue.objects.all()
+    serializer_class = CustomerIssueSerializer
