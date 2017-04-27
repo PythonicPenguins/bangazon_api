@@ -122,4 +122,4 @@ class CustomerIssue(models.Model):
     resolution_description = models.TextField()
     date_created = models.DateTimeField(default=datetime.now, blank=True)
     date_resolved = models.DateTimeField(blank=True, null=True)
-    order = models.ForeignKey(Order)
+    order = models.ForeignKey(Orderrelated_name='customer_issue')
