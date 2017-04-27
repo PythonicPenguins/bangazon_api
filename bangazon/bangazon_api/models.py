@@ -52,6 +52,7 @@ class Order(models.Model):
     customers = models.ForeignKey(Customer)
     payment_types = models.ForeignKey(PaymentType, null=True, blank=True)
 
+
 class OrderProduct(models.Model):
     """
     purpose: create relationship to show products on an order
@@ -86,14 +87,15 @@ class Employee(models.Model):
     """
     first_name = models.CharField(max_length=55)
     last_name = models.CharField(max_length=55)
-    supervisor = models.IntegerField()
+    supervisor = models.IntegerField(default=0)
     departments = models.ForeignKey(Department)
     computers = models.ForeignKey(Computer)
+    customer_support_specialists = models.IntegerField(default=0)
 
 
 class Training(models.Model):
     """
-    purpose: create table to hold traning information
+    purpose: create table to hold training information
     author: Gilberto Diaz
     """
     start_date = models.DateField()
@@ -110,3 +112,14 @@ class TrainingSession(models.Model):
     trainings = models.ForeignKey(Training)
     employees = models.ForeignKey(Employee)
 
+
+class CustomerIssue(models.Model):
+    """
+    purpose: create table to hold customer issues data
+    author: Gilberto Diaz
+    """
+    issue_description = models.TextField()
+    resolution_description = models.TextField()
+    date_created = models.DateTimeField(default=datetime.now, blank=True)
+    date_resolved = models.DateTimeField(blank=True, null=True)
+    order_id = models.ForeignKey(Order)
