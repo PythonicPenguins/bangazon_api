@@ -15,7 +15,7 @@ class Customer(models.Model):
 
 class PaymentType(models.Model):
     """
-    purpose: expose all payment types and add realtionship to Customer class
+    purpose: expose all payment types and add relationship to Customer class
     author: Meg Ducharme
     """
     account_number = models.IntegerField()
@@ -32,7 +32,7 @@ class ProductType(models.Model):
 
 class Product(models.Model):
     """
-    purpose: expose all product types and add realtionship to product type class
+    purpose: expose all product types and add relationship to product type class
     author: Meg Ducharme
     """
     price = models.FloatField()
@@ -45,7 +45,7 @@ class Product(models.Model):
 
 class Order(models.Model):
     """
-    purpose: expose all order types and add realtionship to PaymentType and Customer classes
+    purpose: expose all order types and add relationship to PaymentType and Customer classes
     author: Meg Ducharme
     """
     date_order_created = models.DateTimeField(default=datetime.now, blank=True)
@@ -122,4 +122,4 @@ class CustomerIssue(models.Model):
     resolution_description = models.TextField()
     date_created = models.DateTimeField(default=datetime.now, blank=True)
     date_resolved = models.DateTimeField(blank=True, null=True)
-    order = models.ForeignKey(Orderrelated_name='customer_issue')
+    order = models.ForeignKey(Order, related_name='customer_issues')
