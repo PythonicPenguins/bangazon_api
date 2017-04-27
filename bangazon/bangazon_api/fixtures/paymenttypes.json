@@ -3,21 +3,21 @@
     "model": "bangazon_api.PaymentType",
     "fields": {
       "account_number": 12345,
-      "customers": 1
+      "customer": 1
     }
   },
   {
     "model": "bangazon_api.PaymentType",
     "fields": {
       "account_number": 67890,
-      "customers": 2
+      "customer": 2
     }
   },
   {
     "model": "bangazon_api.PaymentType",
     "fields": {
       "account_number": 13579,
-      "customers": 3
+      "customer": 3
     }
   }
 ]

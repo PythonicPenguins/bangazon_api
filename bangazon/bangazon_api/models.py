@@ -19,7 +19,7 @@ class PaymentType(models.Model):
     author: Meg Ducharme
     """
     account_number = models.IntegerField()
-    customers = models.ForeignKey(Customer)
+    customer = models.ForeignKey(Customer, related_name='payment_types')
 
 
 class ProductType(models.Model):
@@ -39,8 +39,8 @@ class Product(models.Model):
     name = models.CharField(max_length=70)
     description = models.CharField(max_length=255)
     date_created = models.DateTimeField()
-    product_types = models.ForeignKey(ProductType)
-    customers = models.ForeignKey(Customer)
+    product_type = models.ForeignKey(ProductType, related_name='products')
+    customer = models.ForeignKey(Customer, related_name='products')
 
 
 class Order(models.Model):
@@ -49,8 +49,8 @@ class Order(models.Model):
     author: Meg Ducharme
     """
     date_order_created = models.DateTimeField(default=datetime.now, blank=True)
-    customers = models.ForeignKey(Customer)
-    payment_types = models.ForeignKey(PaymentType, null=True, blank=True)
+    customer = models.ForeignKey(Customer, related_name='orders')
+    payment_types = models.ForeignKey(PaymentType, null=True, blank=True, related_name='orders')
 
 
 class OrderProduct(models.Model):
@@ -58,8 +58,8 @@ class OrderProduct(models.Model):
     purpose: create relationship to show products on an order
     author: Meg Ducharme
     """
-    orders = models.ForeignKey(Order)
-    products = models.ForeignKey(Product)
+    order = models.ForeignKey(Order)
+    product = models.ForeignKey(Product)
 
 
 class Computer(models.Model):
@@ -88,9 +88,9 @@ class Employee(models.Model):
     first_name = models.CharField(max_length=55)
     last_name = models.CharField(max_length=55)
     supervisor = models.IntegerField(default=0)
-    departments = models.ForeignKey(Department)
-    computers = models.ForeignKey(Computer)
-    customer_support_specialists = models.IntegerField(default=0)
+    department = models.ForeignKey(Department, related_name='employees')
+    computer = models.ForeignKey(Computer, related_name='employees')
+    customer_support_specialist = models.IntegerField(default=0)
 
 
 class Training(models.Model):
@@ -109,8 +109,8 @@ class TrainingSession(models.Model):
     purpose: create table to hold relationship between training sessions and employees
     author: Gilberto Diaz
     """
-    trainings = models.ForeignKey(Training)
-    employees = models.ForeignKey(Employee)
+    training = models.ForeignKey(Training)
+    employee = models.ForeignKey(Employee)
 
 
 class CustomerIssue(models.Model):
@@ -122,4 +122,4 @@ class CustomerIssue(models.Model):
     resolution_description = models.TextField()
     date_created = models.DateTimeField(default=datetime.now, blank=True)
     date_resolved = models.DateTimeField(blank=True, null=True)
-    order_id = models.ForeignKey(Order)
+    order = models.ForeignKey(Order)

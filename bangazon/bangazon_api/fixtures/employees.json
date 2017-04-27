@@ -5,8 +5,9 @@
       "first_name": "Meg",
       "last_name": "Ducharme",
       "supervisor": 0,
-      "departments": 1,
-      "computers": 1
+      "department": 1,
+      "computer": 1,
+      "customer_support_specialist": 1
     }
   },
   {
@@ -15,8 +16,9 @@
       "first_name": "Gilbert",
       "last_name": "Diaz",
       "supervisor": 0,
-      "departments": 1,
-      "computers": 2
+      "department": 1,
+      "computer": 2,
+      "customer_support_specialist": 2
     }
   },
   {
@@ -25,8 +27,9 @@
       "first_name": "Steve",
       "last_name": "Brownlee",
       "supervisor": 0,
-      "departments": 1,
-      "computers": 3
+      "department": 1,
+      "computer": 3,
+      "customer_support_specialist": 3
     }
   }
 ]

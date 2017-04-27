@@ -1,0 +1,32 @@
+[
+  {
+    "model": "bangazon_api.CustomerIssue",
+    "fields": {
+      "issue_description": "Payment Issue",
+      "resolution_description": "Reimbursed customer.",
+      "date_created": "2017-04-27",
+      "date_resolved": "2017-04-28",
+      "order": 1
+    }
+  },
+  {
+    "model": "bangazon_api.CustomerIssue",
+    "fields": {
+      "issue_description": "Shipping Issue",
+      "resolution_description": "Reimbursed customer.",
+      "date_created": "2017-04-27",
+      "date_resolved": "2017-04-28",
+      "order": 2
+    }
+  },
+  {
+    "model": "bangazon_api.CustomerIssue",
+    "fields": {
+      "issue_description": "Wrong item shipped to customer",
+      "resolution_description": "Sent return label, and shipped correct item.",
+      "date_created": "2017-04-27",
+      "date_resolved": "2017-04-28",
+      "order": 1
+    }
+  }
+]

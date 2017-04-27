@@ -2,19 +2,19 @@
   {
     "model": "bangazon_api.order",
     "fields": {
-      "customers": 1
+      "customer": 1
     }
   },
   {
     "model": "bangazon_api.order",
     "fields": {
-      "customers": 2
+      "customer": 2
     }
   },
   {
     "model": "bangazon_api.order",
     "fields": {
-      "customers": 3
+      "customer": 3
     }
   }
 ]
