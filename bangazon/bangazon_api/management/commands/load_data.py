@@ -12,6 +12,7 @@ class Command(BaseCommand):
         call_command('loaddata', 'producttype.json')
         call_command('loaddata', 'products.json')
         call_command('loaddata', 'orderproduct.json')
+        call_command('loaddata', 'customerissues.json')
         call_command('loaddata', 'departments.json')
         call_command('loaddata', 'computers.json')
         call_command('loaddata', 'employees.json')

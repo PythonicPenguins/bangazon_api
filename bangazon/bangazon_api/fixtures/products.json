@@ -6,8 +6,8 @@
       "name": "Chair",
       "description": "black, very comfortable",
       "date_created": "2017-04-26",
-      "product_types": 1,
-      "customers": 1
+      "product_type": 1,
+      "customer": 1
     }
   },
   {
@@ -17,8 +17,8 @@
       "name": "MP3 Player",
       "description": "crisp sound, lots of memory",
       "date_created": "2017-04-26",
-      "product_types": 2,
-      "customers": 2
+      "product_type": 2,
+      "customer": 2
     }
   },
   {
@@ -28,8 +28,8 @@
       "name": "Wooden desk",
       "description": "handmade from reclaimed wood",
       "date_created": "2017-04-26",
-      "product_types": 3,
-      "customers": 1
+      "product_type": 3,
+      "customer": 1
     }
   }
 ]
