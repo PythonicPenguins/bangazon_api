@@ -1,6 +1,8 @@
 from rest_framework import viewsets
 from bangazon_api.models import *
 from bangazon_api.serializers import *
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
 
 
 class GroupViewSet(viewsets.ModelViewSet):
@@ -25,7 +27,17 @@ class CustomerViewSet(viewsets.ModelViewSet):
     author: Meg Ducharme
     """
     queryset = Customer.objects.all()
-    serializer_class = CustomerSerializer
+
+    def get_serializer_class(self):
+        """
+        Restrict the properties returned based on authentication.
+        
+        author: Gilberto Diaz
+        :return: customer serializer
+        """
+        if self.request.user.is_superuser:
+            return CustomerSerializer
+        return CustomerRestrictedSerializer
 
 
 class PaymentTypeViewSet(viewsets.ModelViewSet):
@@ -105,5 +117,6 @@ class CustomerIssueViewSet(viewsets.ModelViewSet):
     API endpoint that allows training data to be viewed and edited.
     author: Gilberto Diaz
     """
+
     queryset = CustomerIssue.objects.all()
     serializer_class = CustomerIssueSerializer
