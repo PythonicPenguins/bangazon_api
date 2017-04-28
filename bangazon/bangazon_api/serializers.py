@@ -36,6 +36,16 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
         exclude = ()
 
 
+class CustomerRestrictedSerializer(serializers.HyperlinkedModelSerializer):
+    """
+    purpose: Restrict the serialize queried data to json for client for non super users.
+    author: Gilberto Diaz
+    """
+    class Meta:
+        model = Customer
+        exclude = ('date_account_created', 'status')
+
+
 class PaymentTypeSerializer(serializers.HyperlinkedModelSerializer):
     """
     purpose: serialize queried data to json for client
